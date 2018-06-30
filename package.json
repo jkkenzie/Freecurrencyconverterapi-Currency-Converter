@@ -4,21 +4,44 @@
   "description": "Currency Converter app based on https://free.currencyconverterapi.com/",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "build": "gulp build",
+    "deploy": "./bin/deploy.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jkkenzie/Freecurrencyconverterapi-Currency-Converter.git"
+    "url": "git+https://github.com/jkkenzie/Freecurrencyconverterapi-Currency-Converter.git"
   },
   "keywords": [
     "Currency",
     "Converter"
   ],
-  "author": "Joseph K. Mutai @jkkenzie",
+  "author": "Joseph K. Mutai <jkkenzie@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jkkenzie/Freecurrencyconverterapi-Currency-Converter/issues"
   },
   "homepage": "https://github.com/jkkenzie/Freecurrencyconverterapi-Currency-Converter#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "autoprefixer": "^8.6.3",
+    "babelify": "^9.0.0",
+    "browser-sync": "^2.24.5",
+    "browserify": "^16.2.2",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"      
+    },
+  "dependencies": {
+    "idb": "^2.1.3"
+  }
 }
