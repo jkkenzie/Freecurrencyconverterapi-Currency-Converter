@@ -1,0 +1,24 @@
+{
+  "name": "freecurrencyconverterapi-currency-converter",
+  "version": "1.0.0",
+  "description": "Currency Converter app based on https://free.currencyconverterapi.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkkenzie/Freecurrencyconverterapi-Currency-Converter.git"
+  },
+  "keywords": [
+    "Currency",
+    "Converter"
+  ],
+  "author": "Joseph K. Mutai @jkkenzie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkkenzie/Freecurrencyconverterapi-Currency-Converter/issues"
+  },
+  "homepage": "https://github.com/jkkenzie/Freecurrencyconverterapi-Currency-Converter#readme",
+  "devDependencies": {}
+}
