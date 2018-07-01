@@ -17,29 +17,57 @@
     "Converter"
   ],
   "author": "Joseph K. Mutai <jkkenzie@gmail.com>",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/jkkenzie/Freecurrencyconverterapi-Currency-Converter/issues"
   },
   "homepage": "https://github.com/jkkenzie/Freecurrencyconverterapi-Currency-Converter#readme",
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.51",
-    "@babel/preset-env": "^7.0.0-beta.51",
+    "@material/animation": "^0.34.0",
+    "@material/button": "^0.36.1",
+    "@material/dialog": "^0.36.1",
+    "@material/elevation": "^0.36.1",
+    "@material/form-field": "^0.36.0",
+    "@material/list": "^0.36.0",
+    "@material/menu": "^0.36.1",
+    "@material/ripple": "^0.36.0",
+    "@material/snackbar": "^0.36.0",
+    "@material/switch": "^0.36.1",
+    "@material/textfield": "^0.36.1",
+    "@material/theme": "^0.35.0",
+    "@material/toolbar": "^0.36.1",
+    "@material/typography": "^0.35.0",
     "autoprefixer": "^8.6.4",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
     "babelify": "^8.0.0",
     "browser-sync": "^2.24.5",
     "browserify": "^16.2.2",
+    "cssnano": "^3.10.0",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-rev": "^8.1.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
+    "postcss": "^6.0.23",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
     "run-sequence": "^2.2.1",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "webfontloader": "^1.6.28"
   },
-  "dependencies": {}
+  "dependencies": {
+    "idb": "^2.1.3"
+  }
 }

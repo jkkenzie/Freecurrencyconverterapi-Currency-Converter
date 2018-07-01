@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+        <title>Currency Converter</title>
+
+        <meta name="description" content="Currency Converter app based on https://free.currencyconverterapi.com/"/>
+        <meta name="keywords" content="curency converter freecurrencyconveterapi"/>
+        <meta name="author" content="Joseph K. Mutai @jkkenzie" />
+        <meta name="copyright" content="ISC" />
+
+
+        <!-- Disable tap highlight on IE -->
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <!-- Web Application Manifest -->
+        <link rel="manifest" href="manifest.json">
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="curency converter freecurrencyconveterapi">
+        <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="curency converter freecurrencyconveterapi">
+        <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#263238">
+
+        <!-- Color the status bar on mobile devices -->
+        <meta name="theme-color" content="#263238">
+
+        <link rel="stylesheet" href="css/app.css">
+
+        <link rel="icon" href="/images/apple-touch-icon-72x72.png" type="image/png">
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png" />
+         
+        <!-- {% include critical css %} -->    
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+
+    </head>
+
+    <body class="mm-app">
+
+        <header class="mdc-toolbar mdc-elevation--z4 mm-toolbar">
+            <div class="mdc-toolbar__row">
+
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start mm-toolbar__back">
+                    <a class="material-icons mdc-toolbar__menu-icon mm-toolbar__back-button" aria-label="Back" alt="Back">
+                        <img alt="Back" src="images/ic_arrow_back.svg">
+                    </a>
+                </section>
+
+                <section class="mm-toolbar__appname mdc-toolbar__section mdc-toolbar__section--align-start">
+                    <span class="mdc-toolbar__title">Currency Converter</span>
+                </section>
+
+                <section class="mm-toolbar__title-block mdc-toolbar__section mdc-toolbar__section--align-start">
+                    <span class="mdc-toolbar__title mm-toolbar__title"></span>
+                </section>
+
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+                    <div class="mm-menu-anchor mdc-menu-anchor mdc-toolbar__icon">
+                        <a class="material-icons mm-toolbar__more" aria-label="Menu" alt="Menu">
+                            <img alt="More" src="images/ic_more_vert.svg">
+                        </a>
+
+                    </div>
+                </section>
+            </div>
+        </header>
+
+
+        <div class="mm-convert mm-screen mm-screen--hidden">
+            <div class="mm-convert__topbar mdc-elevation--z4">
+                <span class="mm-convert__last-updated"><span data-mm-bind="rates.message">Rates updated </span> <em data-mm-bind="rates.relative">2 days ago</em> </span>
+                <button class="mdc-button mdc-button--compact mdc-button--theme-dark mm-convert__update">
+                    <span>
+                        <img alt="Refresh" class="mm-icon" src="images/ic_refresh.svg">Update now
+                    </span>
+                </button>
+            </div>
+            <div class="mm-convert__card mdc-elevation--z4">
+                <div class="mm-convert__valid-bg"></div>
+                <div class="mm-convert__invalid-bg"></div>
+
+                <form action="post" class="form-Form">
+                    <div id="convert-travel" class="mm-convert__block">
+                        <div class="mm-convert__label">
+
+                            <select name="fromCurrency" class="form-Control form-Select Select-from" aria-label="Currency I have"></select>  
+
+                        </div>
+                        <div class="mm-convert__input">
+
+                            <input type="number" class="form-Control Control-from" min="0" value="1.00" aria-label="Amount">
+                                          <center> FROM</center>
+                        </div>
+                    </div>
+
+                    <div id="convert-home" class="mm-convert__block mm-convert__block--alt">
+                        <div class="mm-convert__label">
+                            <select name="toCurrency" class="form-Control form-Select Select-to" aria-label="Currency I want"></select>
+
+                        </div>
+                        <div class="mm-convert__input">
+
+                            <input type="number" class="form-Control Control-to" min="0" value="" aria-label="Amount">
+                            <center> TO</center>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="mm-convert__common">
+                <center>
+                    <button type="button" class="btn-SwitchCurrencies" title="Swap currencies" aria-hidden="true">
+                        <img src="images/swap-currency.png" alt="Switch Currencies" >
+                    </button>
+                </center>
+                <center>
+                    <p>Developed by: Joseph K. Mutai</p>
+                    <p>#7DaysofCodeChallenge</p>
+                    <p></p>
+                </center>
+            </div>
+        </div>
+
+
+        <div class="Toast-Wrapper Toast-hidden">
+            <div class="Toast">
+                <p class="Toast_Message">New updates Available. Refresh to view</p>
+                <div class="Toast_Buttons">
+                    <button class="Toast_Button Toast_Button-refresh">Refresh</button>
+                    <button class="Toast_Button Toast_Button-dismiss">Dismiss</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>

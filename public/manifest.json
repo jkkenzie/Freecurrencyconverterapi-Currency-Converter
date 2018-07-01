@@ -1,0 +1,20 @@
+{
+  "name": "Currency Converter -> freecurrencyconverterapi.com",
+  "short_name": "Currency Converter",
+  "manifest_version": 1,
+  "description": "A fast, offline-friendly, Currency Converter app based on https://free.currencyconverterapi.com/.",
+  "icons": [{
+        "src": "/images/apple-touch-icon-180x180.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }, {
+        "src": "images/apple-touch-icon-152x152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      }],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#263238",
+  "theme_color": "#263238"
+}
+
